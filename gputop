@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while true; do
+  clear
+  echo "Apple GPU Monitor (Metal)"
+  echo "--------------------------"
+  sudo powermetrics --samplers gpu_power -n 1 | awk '
+    /GPU HW active frequency/ {print "Frequency      : " $5 " MHz"}
+    /GPU HW active residency/ {print "Active Residency: " $5}
+    /GPU idle residency/ {print "Idle Residency  : " $5}
+    /GPU Power:/ {print "Power Draw     : " $3 " mW"}
+  '
+  sleep 1
+done
+
