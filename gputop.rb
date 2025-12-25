@@ -1,7 +1,7 @@
 class Gputop < Formula
   desc "htop-like GPU monitor for Apple Silicon (Metal)"
-  homepage "https://github.com/YOURNAME/gputop"
-  url "https://github.com/YOURNAME/gputop/archive/refs/tags/v0.1.0.tar.gz"
+  homepage "https://github.com/kactlabs/gputop"
+  url "https://github.com/kactlabs/gputop/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "REPLACE_ME"
 
   def install
